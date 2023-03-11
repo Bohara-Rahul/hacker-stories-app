@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import useLocalStorage from "../utils/getLocalStorage";
+// import useLocalStorage from "../utils/getLocalStorage";
 
 const ThemeContext = createContext();
 

@@ -1,6 +1,6 @@
-import { useState, useContext } from "react";
+// import { useState, useContext } from "react";
 import styles from "./Header.module.css";
-import { CiLight, CiDark } from "react-icons/ci";
+// import { CiLight, CiDark } from "react-icons/ci";
 
 const Header = () => {
 
