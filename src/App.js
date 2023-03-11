@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useContext } from 'react';
+import NewsList from './components/NewsList';
+import StoryContext from './context/StoryContext';
+import Search from './components/Search';
+import Header from './components/Header';
 
-function App() {
+const App = () => {
+  const { fetchStories, state } = useContext(StoryContext);
+
+  useEffect(() => {
+    fetchStories()
+  }, [fetchStories]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Search />
+      <hr />
+
+      {state.error && <p>Something went wrong ...</p>}
+
+      {state.loading 
+        ? (
+          <p>Loading...</p>
+        ) 
+        : (
+          <NewsList />
+        )}
+    </>  
   );
-}
+};
 
 export default App;
