@@ -7,7 +7,7 @@ const storiesReducer = (state, action) => {
     case "SET_STORIES":
       return { ...state, stories: action.payload };
     case "REMOVE_STORY":
-      return state.stories.filter(story => story.objectID !== action.payload);
+      return { loading: false, error: false, stories: state.stories.filter(story => story.objectID !== action.payload) }
     case "SET_ERROR":
       return { ...state, error: true };
     case "SET_LOADING":
@@ -34,7 +34,7 @@ const StoryProvider = ({ children }) => {
     dispatch({ type: 'SET_STORIES', payload: response.data.hits });
   }, [searchTerm]);
 
-  const removeStory = async (item) => {
+  const removeStory = (item) => {
     dispatch({ type: 'REMOVE_STORY', payload: item.objectID });
   };
 
