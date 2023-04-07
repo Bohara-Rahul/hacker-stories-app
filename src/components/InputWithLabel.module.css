@@ -7,4 +7,9 @@ input {
   border: none; 
   outline: none;
   height: 20px;
+  padding: 8px;
+  width: 70%;
+  border-radius: 20px;
+  border: 2px solid #000;
+  /* margin-bottom: 5px; */
 }

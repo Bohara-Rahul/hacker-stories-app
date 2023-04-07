@@ -1,17 +1,13 @@
-import { createContext } from "react";
+import { useState, createContext } from "react";
 // import useLocalStorage from "../utils/getLocalStorage";
 
 const ThemeContext = createContext();
 
-export const ThemeProvider = ({ children }) => {
-  // const [theme, setTheme] = getLocal('theme', 'dark');
-
-  // const handleThemeChange = (themeValue) => {
-  //   setTheme(themeValue);
-  // } 
+const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark-theme')
 
   return (
-    <ThemeContext.Provider value={{ hello: 'hello' }}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   )
@@ -19,3 +15,4 @@ export const ThemeProvider = ({ children }) => {
 };
 
 export default ThemeContext;
+export { ThemeProvider };

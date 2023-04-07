@@ -1,11 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto&display=swap');
 
+:root {
+  --color-dark: #2e5090;
+  --color-light: #ccc;
+}
+
+.dark-theme {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.light-theme {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
 body {
   max-width: 1200px;
   margin: 5px auto;
-  background-color: #1A202C;
-  color:#fff;
   font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: var(--color-light);
+}
+
+.dark-theme a {
+  color: var(--color-light);
+}
+
+.light-theme a {
+  color: var(--color-dark);
 }
 
 .center { 
