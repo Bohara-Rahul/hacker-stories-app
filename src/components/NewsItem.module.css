@@ -1,12 +1,3 @@
-.list-item {
-  /* background-color: #2D3848; */
-  /* color: #ccc; */
-  padding: 10px;
-  margin: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
 .block {
   display: inline-flex;
   margin-right: 20px;

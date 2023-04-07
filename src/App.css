@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto&display=swap');
 
 :root {
-  --color-dark: #2e5090;
+  --color-dark: #264784;
   --color-light: #ccc;
 }
 
@@ -23,6 +23,21 @@ body {
 
 a {
   color: var(--color-light);
+}
+
+.list-item {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dark-theme .list-item {
+  background-color: #18356b;
+}
+
+.light-theme .list-item {
+  background-color: #f3ebeb;
 }
 
 .dark-theme a {

@@ -10,7 +10,7 @@ const NewsItem = ({ story }) => {
   };
 
   return (
-    <li className={styles['list-item']}>
+    <li className="list-item">
       <article className={styles.desc}>
       <span className={styles.block}>
         <a 
